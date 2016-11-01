@@ -1,0 +1,17 @@
+#!/bin/bash
+
+printf "Script started \n"
+
+#make sure script is started as root
+if [ $(id -u) != 0 ]; then
+  printf "You need to start this script as root!"
+  exit 1
+fi
+
+#update repos
+apt-get update
+
+# install apache2
+apt-get install apache2
+
+
