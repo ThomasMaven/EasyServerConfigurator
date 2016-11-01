@@ -12,7 +12,7 @@ fi
 apt-get update
 
 # install apache2
-apt-get remove apache2
-apt-get purge apache2
+apt-get -y remove apache2
+apt-get -y purge apache2
 
 
