@@ -12,6 +12,12 @@ fi
 apt-get update
 
 # install apache2
-apt-get -y install php libapache2-mod-php php-mcrypt php-mysql
+apt-get -y install php php7.0 libapache2-mod-php7.0 
+
+#load php module
+sudo a2enmod php7.0
+
+#restar apache2
+sudo service apache2 restart
 
 
