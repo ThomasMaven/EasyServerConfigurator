@@ -12,7 +12,11 @@
     </body>
 </html>
 <?php
-
+require_once("session.php");
+if(!checkSession()){
+    header("Location: /login.php");
+    die();
+} 
 
 
     if(isset($_GET['service'])) {

@@ -11,7 +11,22 @@
 </form>
 
 <?php
-    print_r($_POST[password]);
+require_once("session.php");
+
+if(checkSession()){
+    header("Location: /index.php");
+} else if (! empty($_POST['password']) ) {
+    $password = trim($_POST['password']);
+    $passwdOk = createSession($password);
+    if($passwdOk){
+        header("Location: /index.php");
+    } else {
+        print_r("wrong passwd");
+    }
+}
+
+
+return true;
 /* 
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
