@@ -3,21 +3,26 @@
         <link rel="stylesheet" type="text/css" href="css/style.css">
     </head>
     <div id="header">
+        <a id="logout_button" href="logout.php">Wyloguj</a>
     </div>
     <div id="page_content">
-        <div id="leftmenu">            
-dsafasdffasd
+        <div id="leftmenu">
+            <h3>Dostępne usługi</h3>
+            <a href="?service=apache">Apache2</a>
+            <a href="?service=mysql">MySQL</a>
+            <a href="?service=X">X</a>
+
         </div>
         <div id="content_box">
             <body>
                 <form action="index.php" method="get">
                     <input type="submit" name="service" value="apache">
                     <input type="submit" name="service" value="mysql">
-                    <input type="submit" name="service" value="php">
+                    <!--<input type="submit" name="service" value="php">-->
                                 <br>
                     <input type="submit" name="service" value="apache_uninstall">
                     <input type="submit" name="service" value="mysql_uninstall">
-                    <input type="submit" name="service" value="php_uninstall">
+                    <!--<input type="submit" name="service" value="php_uninstall">-->
                 </form>
             </body>
         </div>
@@ -30,12 +35,12 @@ if(!checkSession()){
     header("Location: /login.php");
     die();
 } 
-
-if(isset($_GET['service'])) {
-    echo "Installing ".$_GET['service'];
-            $output = system("sudo ./scripts/".$_GET['service'].".sh");
-            //$output = shell_exec("pwd");
-            print_r("<br>".$output);
-}
+//
+//if(isset($_GET['service'])) {
+//    echo "Installing ".$_GET['service'];
+//            $output = system("sudo ./scripts/".$_GET['service'].".sh");
+//            $output = shell_exec("pwd");
+//            print_r("<br>".$output);
+//}
 
 ?>

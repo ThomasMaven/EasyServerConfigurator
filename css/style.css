@@ -1,6 +1,6 @@
 body {
-    background: #AEFF7B;
-    color: #5E2AE8;
+    background: #C5CAE9;
+    color: #212121;
     min-width: 400px;
     margin: 0px;
     height: 100%
@@ -14,18 +14,26 @@ form {
 input {
     width: 100%;
     margin: auto;
-    color: #5E2AE8; 
+    color: #212121; 
     font-weight: bold;
     font-size: 16px;
 }
 
+a {
+    display: block;
+    padding-bottom: 5px;
+    color: #FFFFFF;
+}
+fieldset {
+    background: #C5CAE9;
+}
 input[type="password"] {
     background-color : #d1d1d1; 
 
 }
 .submit {
     margin-top: 20px;
-    background: #E8AD2A; 
+    background: #C5CAE9; 
     height: 40px;
 }
 label {
@@ -36,7 +44,9 @@ label {
 #header {
     width: 100%;
     height: 100px;
-    background: #2EFFFD;
+    background: #303F9F;
+    background-image: url("../img/header.png");
+    background-repeat: no-repeat;
 }
 #page_content{
     overflow: hidden;
@@ -45,10 +55,11 @@ label {
 }
 #leftmenu {
     width:20%;
-    background: red;
+    background: #3F51B5;
     float:left;
     overflow-y: hidden;
-    height: 100%
+    height: 100%;
+    padding: 10px;
    
      
 }
@@ -56,3 +67,9 @@ label {
     overflow: hidden;
 }
 
+#logout_button {
+    position: relative;
+    float: right;
+    padding: 3px;
+
+}
