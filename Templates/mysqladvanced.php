@@ -6,12 +6,12 @@ and open the template in the editor.
 -->
 <html>
     <head>
-        <title>TODO supply a title</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <h2>Konfiguracja MySQL - tryb zaawansowany</h2>
     </head>
-<body>
+    
+    <body>        
+    <h2>Konfiguracja MySQL - tryb zaawansowany</h2>
     <form action="index.php" method="get">
         <input name="service" value="mysql" type="hidden">
         <input type="submit" value="Tryb podstawowy">
@@ -27,7 +27,9 @@ and open the template in the editor.
     </form>
 
     <form action="index.php" method="post">
-
+        
+        <input name="service" value="mysql" type="hidden">
+        <input name="action" value="install" type="hidden">
         <div class="form_block">
             <div class="tooltip">Miesce przechowywania danych:
                 <span class="tooltiptext">Nalezy podać bezwzględną sciężkę do folederu na dysku, w którym będą przechowywane dane zapisane w bazie danych.</span>
@@ -104,7 +106,7 @@ and open the template in the editor.
             <input name="thread_cache_size" value="4" >
         </div>
 
-        <input type="submit" name="service" value="mysql">
+        <input type="submit" value="Zainstaluj mysql">
 
 
 

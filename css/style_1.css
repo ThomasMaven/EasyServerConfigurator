@@ -1,0 +1,123 @@
+body {
+    background: #C5CAE9;
+    color: #212121;
+    min-width: 400px;
+    margin: 0px;
+    height: 100%
+}
+form {
+    width: 600px;
+    margin: auto;
+    margin-top: 60px;
+}
+
+input {
+    width: 300px;
+    margin: auto;
+    color: #212121; 
+    font-weight: bold;
+    font-size: 16px;
+}
+
+a {
+    display: block;
+    padding-bottom: 5px;
+    color: #FFFFFF;
+}
+fieldset {
+    background: #C5CAE9;
+}
+input[type="password"] {
+    background-color : #d1d1d1; 
+
+}
+.submit {
+    margin-top: 20px;
+    background: #C5CAE9; 
+    height: 40px;
+}
+label {
+    text-align: center;
+    font-weight: bold;
+    font-size: 30px;
+}
+#header {
+    width: 100%;
+    height: 100px;
+    background: #303F9F;
+    background-image: url("../img/header.png");
+    background-repeat: no-repeat;
+}
+#page_content{
+    overflow: hidden;
+    width: 100%;
+    height: calc(100% - 100px);
+}
+#leftmenu {
+    width:14%;
+    background: #C5CAE9;
+    float:left;
+    overflow-y: hidden;
+    height: 100%;
+    padding: 10px;
+   
+     
+    border-style: solid;
+    border-top: none;
+    border-color: #303F9F;
+}
+#content_box {
+    overflow: hidden;
+}
+
+#logout_button {
+    position: relative;
+    float: right;
+    padding: 3px;
+
+}
+
+.form_block {
+    display: block;
+    float: right
+}
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+    text-decoration: underline;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    left: calc( -250px + 50% );
+    width: 500px;
+    background-color: #FF5252E6;
+    color: #212121;
+    text-align: center;
+    position: absolute;
+    z-index: 10;
+    opacity: 0;
+    transition: opacity 1s;
+    border-radius: 4px;
+    padding: 10px 0;
+    bottom: 120%;
+
+
+}
+
+.tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -10px;
+    border-width: 10px;
+    border-style: solid;
+    border-color: #212121 transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
