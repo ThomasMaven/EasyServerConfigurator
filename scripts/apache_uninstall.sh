@@ -8,11 +8,9 @@ if [ $(id -u) != 0 ]; then
   exit 1
 fi
 
-#update repos
-apt-get update
-
 # install apache2
 apt-get -y remove apache2
 apt-get -y purge apache2
 
+echo "Apache2 uninstall finished"
 
