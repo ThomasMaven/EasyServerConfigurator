@@ -29,7 +29,8 @@ apt-get -y install mysql-server
 #                                          $1      $2   $3              $4                $5               $6           $7                 $8              $9           $10               $11               
 
 sed -i 's/.*datadir.*/datadir      = '$1'/' /etc/mysql/mysql.conf.d/mysqld.cnf
-sed -i 's/.*port.*/port      = '$2'/' /etc/mysql/mysql.conf.d/mysqld.cnf
+#changed regex to prevent lines with the word "support"
+sed -i 's/^port.*/port      = '$2'/' /etc/mysql/mysql.conf.d/mysqld.cnf
 sed -i 's/.*max_connections.*/max_connections      = '$3'/' /etc/mysql/mysql.conf.d/mysqld.cnf
 sed -i 's/.*query_cache_limit.*/query_cache_limit      = '$4'/' /etc/mysql/mysql.conf.d/mysqld.cnf
 sed -i 's/.*query_cache_size.*/query_cache_size      = '$5'/' /etc/mysql/mysql.conf.d/mysqld.cnf
@@ -39,3 +40,5 @@ sed -i 's/.*key_buffer_size.*/key_buffer_size      = '$8'/' /etc/mysql/mysql.con
 sed -i 's/.*thread_stack.*/thread_stack      = '$9'/' /etc/mysql/mysql.conf.d/mysqld.cnf
 sed -i 's/.*thread_cache_size.*/thread_cache_size      = '$10'/' /etc/mysql/mysql.conf.d/mysqld.cnf
 sed -i 's/.*log_error.*/log_error      = '$11'/' /etc/mysql/mysql.conf.d/mysqld.cnf
+
+service mysql start
