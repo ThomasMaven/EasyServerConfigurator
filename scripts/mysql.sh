@@ -24,6 +24,10 @@ debconf-set-selections <<< "mysql-server mysql-server/root_password_again passwo
 #install mysql server
 apt-get -y install mysql-server
 
+#bakcup config file
+timestamp=$(date +%s)
+cp /etc/mysql/mysql.conf.d/mysqld.cnf /etc/mysql/mysql.conf.d/mysqld.cnfBAK_$timestamp
+
 #set correct config params
 #FROM PHP: system("sudo ./scripts/mysql.sh datadir port max_connections query_cache_limit query_cache_size bind-address max_allowed_packet key_buffer_size thread_stack thread_cache_size log_error");
 #                                          $1      $2   $3              $4                $5               $6           $7                 $8              $9           $10               $11               

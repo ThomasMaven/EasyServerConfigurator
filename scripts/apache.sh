@@ -14,6 +14,10 @@ apt-get update
 # install apache2
 apt-get -y install apache2
 
+#bakcup config file
+timestamp=$(date +%s)
+cp /etc/apache2/apache2.conf /etc/apache2/apache2.confBAK_$timestamp
+
 #FROM PHP system("sudo ./scripts/apache.sh Timeout KeepAlive MaxKeepAliveRequest KeepAliveTimeout User Group HostnameLookups ErrorLog LogLevel Listen");
 #                                          $1      $2        $3                  $4               $5   $6    $7              $8       $9       $10
 
