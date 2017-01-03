@@ -51,7 +51,7 @@ label {
 #page_content{
     overflow: hidden;
     width: 100%;
-    height: calc(100% - 100px);
+    min-height: calc(100% - 100px);
 }
 #leftmenu {
     width:20%;
@@ -117,4 +117,21 @@ label {
 .tooltip:hover .tooltiptext {
     visibility: visible;
     opacity: 1;
+}
+
+.loginbox{
+    display:block;
+    width: 100%;
+    height: 100%;
+    padding-top: 40px;
+}
+
+.loginelement{
+    display:block;
+    width: 100%;
+    margin-top: 20px;
+}
+#loginform {
+    width: 400px;
+    height: 240px;
 }

@@ -19,12 +19,6 @@ and open the template in the editor.
 
     </form>
     
-    <form action="index.php" method="get">
-        <input type="submit" name="service" value="mysql_uninstall">
-
-
-
-    </form>
 
     <form action="index.php" method="post">
         
@@ -108,8 +102,14 @@ and open the template in the editor.
 
         <input type="submit" value="Zainstaluj mysql">
 
-
+    </form>
+    
+    <form action="index.php" method="post">
+        <input type="submit" value="Odinstaluj mysql">
+        <input name="service" value="mysql" type="hidden">
+        <input name="action" value="uninstall" type="hidden">
 
     </form>
+    
 </body>
 </html>
