@@ -1,12 +1,14 @@
 <head>
     <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
-<form id="login" action="login.php" method="post" >
-    <fieldset >
-        <input type="hidden" name="submitted" id="submitted" value="1"/>
-        <label for="password" >Podaj hasło:</label>
-        <input type="password" name="password" id="password" maxlength="50" />
-        <input type="submit" class="submit" value="Zaloguj" />
+<div id="header">
+</div>
+<form id="loginform" action="login.php" method="post" >
+    <fieldset class="loginbox">
+        <input type="hidden" class="loginelement" name="submitted" id="submitted" value="1"/>
+        <label for="password" class="loginelement" >Podaj hasło:</label>
+        <input type="password" class="loginelement" name="password" id="password" maxlength="50" />
+        <input type="submit" class="submit loginelement" value="Zaloguj" />
     </fieldset>
 </form>
 

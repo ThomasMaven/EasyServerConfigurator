@@ -21,19 +21,27 @@ and open the template in the editor.
         </form>
         
         <form action="index.php" method="post">
-            <input type="submit" name="service" value="apache">
-
-            <input type="submit" name="service" value="apache_uninstall">
-            <input name="timeout" value="300" type="hidden">
-            <input name="KeepAlive" value="on" type="hidden">
+            <input type="submit" value="Zainstaluj Apache2">
+            <input name="service" value="apache" type="hidden">
+            <input name="action" value="install" type="hidden">
+            
+           
+            <input name="Timeout" value="300" type="hidden">
+            <input name="KeepAlive" value="On" type="hidden">
             <input name="MaxKeepAliveRequest" value="100" type="hidden">
             <input name="KeepAliveTimeout" value="5" type="hidden">
-            <input name="User" value="???" type="hidden">
-            <input name="Group" value="???" type="hidden">
+            <input name="User" value="www-data" type="hidden">
+            <input name="Group" value="www-data" type="hidden">
             <input name="HostnameLookups" value="Off" type="hidden">
             <input name="ErrorLog" value="/var/lib/apache2/error.log" type="hidden">
             <input name="LogLevel" value="warn" type="hidden">            
             <input name="Listen" value="80" type="hidden">
+
+        </form>
+        <form action="index.php" method="post">
+            <input type="submit" value="Odinstaluj Apache2">
+            <input name="service" value="apache" type="hidden">
+            <input name="action" value="uninstall" type="hidden">
 
         </form>
     </body>
