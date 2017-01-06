@@ -6,7 +6,7 @@
  * and open the template in the editor.
  */
 //global $passwdHash;
-$passwdHash = "40bd001563085fc35165329ea1ff5c5ecbdbbeef";
+$passwdHash ="40bd001563085fc35165329ea1ff5c5ecbdbbeef";
 
 function createSession($password) {
     
@@ -35,4 +35,9 @@ function checkSession() {
         return true;
     }
     return false;
+}
+
+function setNewPassword($newPass) {
+    $newPasswordHash = sha1($newPass);
+    system('sed -i \'s/^$passwdHash =.*/$passwdHash ="'.$newPasswordHash.'";/\' session.php');
 }

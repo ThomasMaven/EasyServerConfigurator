@@ -4,13 +4,17 @@
     </head>
     <div id="header">
         <a id="logout_button" href="logout.php">Wyloguj</a>
+        <a id="passwd_button" href="index.php?service=password">Zmień hasło</a>
+        
     </div>
     <div id="page_content">
         <div id="leftmenu">
             <h3>Dostępne usługi</h3>
             <a href="?service=apache">Apache2</a>
             <a href="?service=mysql">MySQL</a>
-            <a href="?service=dhcp">DHCP</a>
+            <a href="?service=mysql">PostgreSQL</a>
+            <a href="?service=vsftp">Very Secure FTP Server</a>
+            <a href="?service=bind">BIND</a>
 
         </div>
         <div id="content_box">
@@ -27,7 +31,7 @@
                         mysqlUninstall();
                     else if ($_REQUEST['service'] == "apache")
                         apacheUninstall();
-                }
+                } 
                 ?>
 
             </body>

@@ -67,7 +67,7 @@ label {
     overflow: hidden;
 }
 
-#logout_button {
+#logout_button, #passwd_button {
     position: relative;
     float: right;
     padding: 3px;
