@@ -42,7 +42,7 @@ sed -i 's/.*bind-address.*/bind-address      = '$6'/' /etc/mysql/mysql.conf.d/my
 sed -i 's/.*max_allowed_packet.*/max_allowed_packet      = '$7'/' /etc/mysql/mysql.conf.d/mysqld.cnf
 sed -i 's/.*key_buffer_size.*/key_buffer_size      = '$8'/' /etc/mysql/mysql.conf.d/mysqld.cnf
 sed -i 's/.*thread_stack.*/thread_stack      = '$9'/' /etc/mysql/mysql.conf.d/mysqld.cnf
-sed -i 's/.*thread_cache_size.*/thread_cache_size      = '$10'/' /etc/mysql/mysql.conf.d/mysqld.cnf
-sed -i 's/.*log_error.*/log_error      = '$11'/' /etc/mysql/mysql.conf.d/mysqld.cnf
+sed -i 's/.*thread_cache_size.*/thread_cache_size      = '${10}'/' /etc/mysql/mysql.conf.d/mysqld.cnf
+sed -i 's/.*log_error.*/log_error      = '${11}'/' /etc/mysql/mysql.conf.d/mysqld.cnf
 
 service mysql start

@@ -13,25 +13,31 @@
             <a href="?service=apache">Apache2</a>
             <a href="?service=mysql">MySQL</a>
             <a href="?service=mysql">PostgreSQL</a>
-            <a href="?service=vsftp">Very Secure FTP Server</a>
+            <a href="?service=vsftpd">Very Secure FTP Server</a>
             <a href="?service=bind">BIND</a>
 
         </div>
         <div id="content_box">
             <body>
                 <?php
-                include 'Templates/' . $_REQUEST['service'] . $_REQUEST['mode'] . '.php';
-                if ($_REQUEST['action'] == "install") {
-                    if ($_REQUEST['service'] == "mysql")
-                        mysqlInstall();
-                    else if ($_REQUEST['service'] == "apache")
-                        apacheInstall();
-                } else if ($_REQUEST['action'] == "uninstall") {
-                    if ($_REQUEST['service'] == "mysql")
-                        mysqlUninstall();
-                    else if ($_REQUEST['service'] == "apache")
-                        apacheUninstall();
-                } 
+                if( isset($_REQUEST['service']) ) {
+                    include 'Templates/' . $_REQUEST['service'] . $_REQUEST['mode'] . '.php';
+                    if ($_REQUEST['action'] == "install") {
+                        if ($_REQUEST['service'] == "mysql")
+                            mysqlInstall();
+                        else if ($_REQUEST['service'] == "apache")
+                            apacheInstall();
+                        else if ($_REQUEST['service'] == "vsftpd")
+                            vsftpdInstall();
+                    } else if ($_REQUEST['action'] == "uninstall") {
+                        if ($_REQUEST['service'] == "mysql")
+                            mysqlUninstall();
+                        else if ($_REQUEST['service'] == "apache")
+                            apacheUninstall();
+                        else if ($_REQUEST['service'] == "vsftpd")
+                            vsftpdUninstall();
+                    } 
+                }
                 ?>
 
             </body>
@@ -54,6 +60,10 @@ function mysqlInstall() {
             $_REQUEST['max_allowed_packet'] . " " .
             $_REQUEST['key_buffer_size'] . " " . $_REQUEST['thread_stack'] . " " .
             $_REQUEST['thread_cache_size'] . " " . $_REQUEST['log_error']);
+}
+function vsftpdInstall() {
+    //system("sudo ./scripts/mysql.sh listen listen_ipv6 anonymous_enable write_enable local_umask anon_upload_enable anon_mkdir_write_enable dirmessage_enable use_localtime xferlog_enable");
+    system("sudo ./scripts/vsftpd.sh ".$_REQUEST['listen']." ".$_REQUEST['listen_ipv6']." ".$_REQUEST['anonymous_enable']." ".$_REQUEST['write_enable']." ".$_REQUEST['local_umask']." ".$_REQUEST['anon_upload_enable']." ".$_REQUEST['anon_mkdir_write_enable']." ".$_REQUEST['dirmessage_enable']." ".$_REQUEST['use_localtime']." ".$_REQUEST['xferlog_enable']);
 }
 
 function mysqlUninstall() {
@@ -129,4 +139,11 @@ function apacheUninstall() {
     print_r("apache uninstall");
     system("sudo ./scripts/apache_uninstall.sh");
 }
+
+function vsftpdUninstall() {
+
+    print_r("vsftpd uninstall");
+    system("sudo ./scripts/vsftpd_uninstall.sh");
+}
+
 ?>
