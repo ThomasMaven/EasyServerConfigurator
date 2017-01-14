@@ -62,8 +62,8 @@ function mysqlInstall() {
             $_REQUEST['thread_cache_size'] . " " . $_REQUEST['log_error']);
 }
 function vsftpdInstall() {
-    //system("sudo ./scripts/mysql.sh datadir port max_connections query_cache_limit query_cache_size bind-address max_allowed_packet key_buffer_size thread_stack thread_cache_size log_error");
-    system("sudo ./scripts/vsftpd.sh");
+    //system("sudo ./scripts/mysql.sh listen listen_ipv6 anonymous_enable write_enable local_umask anon_upload_enable anon_mkdir_write_enable dirmessage_enable use_localtime xferlog_enable");
+    system("sudo ./scripts/vsftpd.sh ".$_REQUEST['listen']." ".$_REQUEST['listen_ipv6']." ".$_REQUEST['anonymous_enable']." ".$_REQUEST['write_enable']." ".$_REQUEST['local_umask']." ".$_REQUEST['anon_upload_enable']." ".$_REQUEST['anon_mkdir_write_enable']." ".$_REQUEST['dirmessage_enable']." ".$_REQUEST['use_localtime']." ".$_REQUEST['xferlog_enable']);
 }
 
 function mysqlUninstall() {

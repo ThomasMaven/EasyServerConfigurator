@@ -26,6 +26,6 @@ sed -i 's/^Group .*/Group '$6'/' /etc/apache2/apache2.conf
 sed -i 's/^HostnameLookups .*/HostnameLookups '$7'/' /etc/apache2/apache2.conf
 sed -i 's/^ErrorLog .*/ErrorLog '$8'/' /etc/apache2/apache2.conf
 sed -i 's/^LogLevel .*/LogLevel '$9'/' /etc/apache2/apache2.conf
-sed -i 's/^Listen .*/Listen '$10'/' /etc/apache2/apache2.conf
+sed -i 's/^Listen .*/Listen '${10}'/' /etc/apache2/apache2.conf
 
 service apache2 start
