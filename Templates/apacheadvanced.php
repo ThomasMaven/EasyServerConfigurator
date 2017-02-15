@@ -37,21 +37,21 @@ and open the template in the editor.
 
             <div class="form_block">
                 <div class="tooltip">Parametr MaxKeepAliveRequest:
-                    <span class="tooltiptext">Maksymalna ilość zapytań podczas "trwałego" połączenia. Ze względu na wydajnośc warto ustawić dużą wartość. Wartość 0 oznacza brak limitu.</span>
+                    <span class="tooltiptext">Maksymalna ilość zapytań podczas "trwałego" połączenia. Ze względu na wydajność warto ustawić dużą wartość. Wartość 0 oznacza brak limitu.</span>
                 </div>              
                 <input name="MaxKeepAliveRequest" value="100">
             </div>
 
             <div class="form_block">
                 <div class="tooltip">Parametr KeepAliveTimeout:
-                    <span class="tooltiptext">Parametr określa ilość oczekiwania na kolejne zapytanie od tego samego klienta.</span>
+                    <span class="tooltiptext">Parametr określa ilość czasu (w sekundach) oczekiwania na kolejne zapytanie od tego samego klienta, przed zamknięciem połączenia.</span>
                 </div>              
                 <input name="KeepAliveTimeout" value="5">
             </div>
 
             <div class="form_block">
                 <div class="tooltip">Użytkownik:
-                    <span class="tooltiptext">Użytkonik Apache</span>
+                    <span class="tooltiptext">Użytkownik Apache</span>
                 </div>              
                 <input name="User" value="www-data">
             </div>
@@ -81,7 +81,7 @@ and open the template in the editor.
 
             <div class="form_block">
                 <div class="tooltip">Parametr LogLevel:
-                    <span class="tooltiptext">Parametr określa minimalny poziom zdarzeń, ktore są zapisywane w logach. Możliwe opcje to: traceX (X to liczba całkowita od 1 do 8), debug, info, notice, warn,error, crit, alert, emerg</span>
+                    <span class="tooltiptext">Parametr określa minimalny poziom zdarzeń, ktore są zapisywane w logach. Możliwe opcje to: traceX (X to liczba całkowita od 1 do 8), debug, info, notice, warn,error, crit, alert, emerg.</span>
                 </div>              
                 <input name="LogLevel" value="warn">          
             </div> 

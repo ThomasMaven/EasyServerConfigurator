@@ -26,14 +26,14 @@ and open the template in the editor.
         <input name="action" value="install" type="hidden">
         <div class="form_block">
             <div class="tooltip">Miesce przechowywania danych:
-                <span class="tooltiptext">Nalezy podać bezwzględną sciężkę do folederu na dysku, w którym będą przechowywane dane zapisane w bazie danych.</span>
+                <span class="tooltiptext">Należy podać bezwzględną scieżkę do folderu na dysku, w którym będą przechowywane dane zapisane w bazie danych.</span>
             </div>
             <input name="datadir" value="/var/lib/mysql" >
         </div>
         
         <div class="form_block">
             <div class="tooltip">Miesce zapisywania logów błędów
-                <span class="tooltiptext">Nalezy podać bezwzględną sciężkę do pliki na dysku, w którym będą zapisywane błędy serwera MySQL.</span>                
+                <span class="tooltiptext">Należy podać bezwzględną ścieżkę do pliki na dysku, w którym będą zapisywane błędy serwera MySQL.</span>                
             </div>
             <input name="log_error" value="/var/log/mysql/error.log" >
         </div>    
@@ -74,14 +74,14 @@ and open the template in the editor.
 
         <div class="form_block">
             <div class="tooltip">Parametr max_allowed_packet:
-                <span class="tooltiptext">Parametr określa maksymalny rozmiar jednego pakietu. Jeżeli baza przetwarza duże zapytania (np. duże bloby), nażey odpowiednio zwiększyć wartość parametru. Zalecane wartości od 8M do 512M</span>                
+                <span class="tooltiptext">Parametr określa maksymalny rozmiar jednego pakietu. Jeżeli baza przetwarza duże zapytania (np. duże bloby), należy odpowiednio zwiększyć wartość parametru. Zalecane wartości od 8M do 512M</span>                
             </div>
             <input name="max_allowed_packet" value="64M" >
         </div>
 
         <div class="form_block">
             <div class="tooltip">Parametr key_buffer_size:
-                <span class="tooltiptext">Parametr określa ilość pamięci cache przeznaczonej na przechowywanie indeksów w pamięci. Zaleca wartość to ok. 10-25% pamięci RAM.</span>                
+                <span class="tooltiptext">Parametr określa ilość pamięci cache przeznaczonej na przechowywanie indeksów w pamięci. Zalecana wartość to ok. 10-25% pamięci RAM.</span>                
             </div>
             <input name="key_buffer_size" value="64M" >
         </div>
