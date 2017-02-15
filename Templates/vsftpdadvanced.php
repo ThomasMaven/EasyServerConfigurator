@@ -56,31 +56,31 @@ and open the template in the editor.
         </div>
         <div class="form_block">
             <div class="tooltip">Parametr anon_upload_enable:
-                    <span class="tooltiptext">Parametr decyduje o tym czy anonimowi urzystkonicy będą mieli uprawnienia do dodawania plików. Aby to było możliwe dodatkowo opcja write_enable musi mieć wartość YES i anonimowy użytkownik ftp musi mieć uprawnienia do zapisu w danej lokalizacji.</span>
+                    <span class="tooltiptext">Parametr decyduje o tym czy anonimowi użytkownicy będą mieli uprawnienia do dodawania plików. Aby to było możliwe dodatkowo opcja write_enable musi mieć wartość YES i anonimowy użytkownik ftp musi mieć uprawnienia do zapisu w danej lokalizacji.</span>
                 </div>
                 <input name="anon_upload_enable" value="NO" >
         </div>
         <div class="form_block">
             <div class="tooltip">Parametr anon_mkdir_write_enable:
-                    <span class="tooltiptext">Parametr decyduje o tym czy anonimowi urzystkonicy będą mieli uprawnienia do tworzenia folderów. Aby to było możliwe dodatkowo opcja write_enable musi mieć wartość YES i anonimowy użytkownik ftp musi mieć uprawnienia do zapisu w danej lokalizacji.</span>
+                    <span class="tooltiptext">Parametr decyduje o tym czy anonimowi użytkownicy będą mieli uprawnienia do tworzenia folderów. Aby to było możliwe dodatkowo opcja write_enable musi mieć wartość YES i anonimowy użytkownik ftp musi mieć uprawnienia do zapisu w danej lokalizacji.</span>
                 </div>
                 <input name="anon_mkdir_write_enable" value="NO" >
         </div>
         <div class="form_block">
             <div class="tooltip">Parametr dirmessage_enable:
-                    <span class="tooltiptext">Nalezy podać bezwzględną sciężkę do folederu na dysku, w którym będą przechowywane dane zapisane w bazie danych.</span>
+                    <span class="tooltiptext">Włączenie tej opcji pozwala na wyświetlanie użytkownikom komunikatu podczas pierwszego wejścia do nowego folderu. Domyślnie w folderze poszukiwany jest plik o nazwie .message i użytkownikowi wyświetlana jest jego treść.</span>
                 </div>
                 <input name="dirmessage_enable" value="YES" >
         </div>
         <div class="form_block">
             <div class="tooltip">Parametr use_localtime:
-                    <span class="tooltiptext">Włączenie tej opcji pozwala na wyświetlanie użytkonikom komunikatu podczas pierwszego wejścia do nowego folderu. Domyślnie w folderze poszukiwany jest plik o nazwie .message i użytkownikowi wyświetlana jest jego treść.</span>
+                    <span class="tooltiptext">Wartość parametru definiuje czy przy wyświetlaniu zawartości folderów powinna być wykorzystywana strefa czasowa użytkownika (daty utworzenia i modyfikacji plików). W przypadku wybrania opcji NO, daty wyświetlane będą z wykorzystaniem czasu GTM.</span>
                 </div>
                 <input name="use_localtime" value="YES" >
         </div>
         <div class="form_block">
             <div class="tooltip">Parametr xferlog_enable:
-                    <span class="tooltiptext">Parametr definiuje czy akcje użytkoników takie jak ściąganie i twrzoenie plików powinny być logowane.</span>
+                    <span class="tooltiptext">Parametr definiuje czy akcje użytkowników takie jak ściąganie i tworzenie plików powinny być logowane.</span>
                 </div>
                 <input name="xferlog_enable" value="YES" >
         </div>

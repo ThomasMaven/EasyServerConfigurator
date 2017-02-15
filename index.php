@@ -12,9 +12,9 @@
             <h3>Dostępne usługi</h3>
             <a href="?service=apache">Apache2</a>
             <a href="?service=mysql">MySQL</a>
-            <a href="?service=mysql">PostgreSQL</a>
+            <a href="?service=postgres">PostgreSQL</a>
             <a href="?service=vsftpd">Very Secure FTP Server</a>
-            <a href="?service=bind">BIND</a>
+            <a href="?service=dhcp">ISC DHCP server</a>
 
         </div>
         <div id="content_box">
@@ -29,6 +29,10 @@
                             apacheInstall();
                         else if ($_REQUEST['service'] == "vsftpd")
                             vsftpdInstall();
+                        else if ($_REQUEST['service'] == "postgres")
+                            postgresInstall();
+                        else if ($_REQUEST['service'] == "dhcp")
+                            dhcpInstall();
                     } else if ($_REQUEST['action'] == "uninstall") {
                         if ($_REQUEST['service'] == "mysql")
                             mysqlUninstall();
@@ -36,6 +40,10 @@
                             apacheUninstall();
                         else if ($_REQUEST['service'] == "vsftpd")
                             vsftpdUninstall();
+                        else if ($_REQUEST['service'] == "postgres")
+                            postgresUninstall();
+                        else if ($_REQUEST['service'] == "dhcp")
+                            dhcpUninstall();
                     } 
                 }
                 ?>
@@ -144,6 +152,28 @@ function vsftpdUninstall() {
 
     print_r("vsftpd uninstall");
     system("sudo ./scripts/vsftpd_uninstall.sh");
+}
+
+function postgresInstall() {
+    //system("sudo ./scripts/postgres.sh port max_connections ssl shared_buffers temp_buffers work_mem maintenance_work_mem dynamic_shared_memory_type max_files_per_process max_worker_processes");
+    system("sudo ./scripts/postgres.sh ".$_REQUEST['port']." ".$_REQUEST['max_connections']." ".$_REQUEST['ssl']." ".$_REQUEST['shared_buffers']." ".$_REQUEST['temp_buffers']." ".$_REQUEST['work_mem']." ".$_REQUEST['maintenance_work_mem']." ".$_REQUEST['dynamic_shared_memory_type']." ".$_REQUEST['max_files_per_process']." ".$_REQUEST['max_worker_processes']);
+}
+
+function dhcpInstall() {
+    //system("sudo ./scripts/dhcp.sh default-lease-time subnet range_from range_to routers domain-name-servers domain-name");
+    system("sudo ./scripts/dhcp.sh ".$_REQUEST['default-lease-time']." ".$_REQUEST['max-lease-time']." ".$_REQUEST['subnet']." ".$_REQUEST['netmask']." ".$_REQUEST['range_from']." ".$_REQUEST['range_to']." ".$_REQUEST['routers']." ".$_REQUEST['domain-name-servers']." ".$_REQUEST['domain-name']);
+}
+
+function dhcpUninstall() {
+
+    print_r("dhcp uninstall");
+    system("sudo ./scripts/dhcp_uninstall.sh");
+}
+
+function postgresUninstall() {
+
+    print_r("Postges uninstall");
+    system("sudo ./scripts/postgres_uninstall.sh");
 }
 
 ?>
